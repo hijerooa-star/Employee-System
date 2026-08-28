@@ -48,10 +48,12 @@
             this.grpboxlogin.Controls.Add(this.lblpassword);
             this.grpboxlogin.Controls.Add(this.lblusername);
             this.grpboxlogin.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpboxlogin.ForeColor = System.Drawing.Color.Navy;
-            this.grpboxlogin.Location = new System.Drawing.Point(251, 147);
+            this.grpboxlogin.ForeColor = System.Drawing.Color.Black;
+            this.grpboxlogin.Location = new System.Drawing.Point(188, 119);
+            this.grpboxlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grpboxlogin.Name = "grpboxlogin";
-            this.grpboxlogin.Size = new System.Drawing.Size(421, 329);
+            this.grpboxlogin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpboxlogin.Size = new System.Drawing.Size(316, 267);
             this.grpboxlogin.TabIndex = 2;
             this.grpboxlogin.TabStop = false;
             this.grpboxlogin.Text = "Employee Login";
@@ -59,28 +61,33 @@
             // txtpassword
             // 
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(40, 211);
+            this.txtpassword.ForeColor = System.Drawing.Color.Black;
+            this.txtpassword.Location = new System.Drawing.Point(30, 171);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(258, 28);
+            this.txtpassword.Size = new System.Drawing.Size(194, 24);
             this.txtpassword.TabIndex = 4;
             this.txtpassword.UseSystemPasswordChar = true;
             // 
             // txtusername
             // 
             this.txtusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(40, 118);
+            this.txtusername.ForeColor = System.Drawing.Color.Black;
+            this.txtusername.Location = new System.Drawing.Point(30, 96);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(264, 28);
+            this.txtusername.Size = new System.Drawing.Size(199, 24);
             this.txtusername.TabIndex = 3;
             // 
             // btnlogin
             // 
             this.btnlogin.BackColor = System.Drawing.Color.White;
             this.btnlogin.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.ForeColor = System.Drawing.Color.Navy;
-            this.btnlogin.Location = new System.Drawing.Point(150, 272);
+            this.btnlogin.ForeColor = System.Drawing.Color.Black;
+            this.btnlogin.Location = new System.Drawing.Point(112, 221);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(148, 32);
+            this.btnlogin.Size = new System.Drawing.Size(111, 26);
             this.btnlogin.TabIndex = 2;
             this.btnlogin.Text = "LOGIN";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -90,10 +97,11 @@
             // 
             this.lblpassword.AutoSize = true;
             this.lblpassword.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpassword.ForeColor = System.Drawing.Color.Navy;
-            this.lblpassword.Location = new System.Drawing.Point(36, 174);
+            this.lblpassword.ForeColor = System.Drawing.Color.Black;
+            this.lblpassword.Location = new System.Drawing.Point(27, 141);
+            this.lblpassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(100, 21);
+            this.lblpassword.Size = new System.Drawing.Size(82, 17);
             this.lblpassword.TabIndex = 1;
             this.lblpassword.Text = "Password";
             // 
@@ -102,21 +110,23 @@
             this.lblusername.AutoSize = true;
             this.lblusername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblusername.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusername.ForeColor = System.Drawing.Color.Navy;
-            this.lblusername.Location = new System.Drawing.Point(36, 81);
+            this.lblusername.ForeColor = System.Drawing.Color.Black;
+            this.lblusername.Location = new System.Drawing.Point(27, 66);
+            this.lblusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(106, 21);
+            this.lblusername.Size = new System.Drawing.Size(86, 17);
             this.lblusername.TabIndex = 0;
             this.lblusername.Text = "Username";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(894, 681);
+            this.ClientSize = new System.Drawing.Size(670, 553);
             this.Controls.Add(this.grpboxlogin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

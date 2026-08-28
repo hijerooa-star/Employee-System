@@ -35,23 +35,17 @@ namespace Employee_System
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currentOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dailySalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Tabcontrol = new System.Windows.Forms.TabControl();
             this.tabItem = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -100,6 +94,19 @@ namespace Employee_System
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabHill = new System.Windows.Forms.TabPage();
             this.pnlRestauranthall = new System.Windows.Forms.Panel();
+            this.btnT10 = new System.Windows.Forms.Button();
+            this.btnT9 = new System.Windows.Forms.Button();
+            this.btnT8 = new System.Windows.Forms.Button();
+            this.btnT2 = new System.Windows.Forms.Button();
+            this.btnT3 = new System.Windows.Forms.Button();
+            this.btnT4 = new System.Windows.Forms.Button();
+            this.btnT5 = new System.Windows.Forms.Button();
+            this.btnT6 = new System.Windows.Forms.Button();
+            this.btnT7 = new System.Windows.Forms.Button();
+            this.btnT1 = new System.Windows.Forms.Button();
+            this.btnacc = new System.Windows.Forms.Button();
+            this.btnreserve = new System.Windows.Forms.Button();
+            this.btnavailable = new System.Windows.Forms.Button();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,6 +129,7 @@ namespace Employee_System
             this.tabcurrent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgcurrentorder)).BeginInit();
             this.tabHill.SuspendLayout();
+            this.pnlRestauranthall.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -136,137 +144,101 @@ namespace Employee_System
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(982, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenu
             // 
             this.fileToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.loginToolStripMenuItem});
             this.fileToolStripMenu.Name = "fileToolStripMenu";
-            this.fileToolStripMenu.Size = new System.Drawing.Size(51, 24);
+            this.fileToolStripMenu.Size = new System.Drawing.Size(42, 20);
             this.fileToolStripMenu.Text = "File";
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.newToolStripMenuItem.Text = "New";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // loginToolStripMenuItem
+            // 
+            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.loginToolStripMenuItem.Text = "Logout";
+            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // itemToolStripMenuItem
             // 
             this.itemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addItemToolStripMenuItem,
-            this.deleteItemToolStripMenuItem,
-            this.viewItemToolStripMenuItem});
+            this.newItemToolStripMenuItem});
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
             this.itemToolStripMenuItem.RightToLeftAutoMirrorImage = true;
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.itemToolStripMenuItem.Text = "Items";
             // 
             // addItemToolStripMenuItem
             // 
             this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
-            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.addItemToolStripMenuItem.Text = "Add Item";
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
             // 
-            // deleteItemToolStripMenuItem
+            // newItemToolStripMenuItem
             // 
-            this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
-            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.deleteItemToolStripMenuItem.Text = "Delete Item";
-            // 
-            // viewItemToolStripMenuItem
-            // 
-            this.viewItemToolStripMenuItem.Name = "viewItemToolStripMenuItem";
-            this.viewItemToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.viewItemToolStripMenuItem.Text = "View Item";
+            this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.newItemToolStripMenuItem.Text = "New  item";
+            this.newItemToolStripMenuItem.Click += new System.EventHandler(this.newItemToolStripMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newOrderToolStripMenuItem,
-            this.currentOrderToolStripMenuItem,
-            this.orderHistoryToolStripMenuItem});
+            this.currentOrderToolStripMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.orderToolStripMenuItem.Text = "Orders";
-            // 
-            // newOrderToolStripMenuItem
-            // 
-            this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
-            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
-            this.newOrderToolStripMenuItem.Text = "New Order";
             // 
             // currentOrderToolStripMenuItem
             // 
-            this.currentOrderToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.currentOrderToolStripMenuItem.Name = "currentOrderToolStripMenuItem";
-            this.currentOrderToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.currentOrderToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.currentOrderToolStripMenuItem.Text = "Current Order";
-            // 
-            // orderHistoryToolStripMenuItem
-            // 
-            this.orderHistoryToolStripMenuItem.Name = "orderHistoryToolStripMenuItem";
-            this.orderHistoryToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
-            this.orderHistoryToolStripMenuItem.Text = "Order History";
+            this.currentOrderToolStripMenuItem.Click += new System.EventHandler(this.currentOrderToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dailySalesToolStripMenuItem,
-            this.itemReportToolStripMenuItem,
-            this.orderReportToolStripMenuItem});
+            this.salesReportToolStripMenuItem});
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // dailySalesToolStripMenuItem
+            // salesReportToolStripMenuItem
             // 
-            this.dailySalesToolStripMenuItem.Name = "dailySalesToolStripMenuItem";
-            this.dailySalesToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.dailySalesToolStripMenuItem.Text = "Daily Sales";
-            // 
-            // itemReportToolStripMenuItem
-            // 
-            this.itemReportToolStripMenuItem.Name = "itemReportToolStripMenuItem";
-            this.itemReportToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.itemReportToolStripMenuItem.Text = "Item Report ";
-            // 
-            // orderReportToolStripMenuItem
-            // 
-            this.orderReportToolStripMenuItem.Name = "orderReportToolStripMenuItem";
-            this.orderReportToolStripMenuItem.Size = new System.Drawing.Size(204, 26);
-            this.orderReportToolStripMenuItem.Text = "Order Report ";
+            this.salesReportToolStripMenuItem.Name = "salesReportToolStripMenuItem";
+            this.salesReportToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.salesReportToolStripMenuItem.Text = "Sales Report";
+            this.salesReportToolStripMenuItem.Click += new System.EventHandler(this.salesReportToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem,
-            this.helpToolStripMenuItem1});
+            this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(142, 26);
-            this.helpToolStripMenuItem1.Text = "Help";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // Tabcontrol
             // 
@@ -274,7 +246,7 @@ namespace Employee_System
             this.Tabcontrol.Controls.Add(this.tabcurrent);
             this.Tabcontrol.Controls.Add(this.tabHill);
             this.Tabcontrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tabcontrol.Location = new System.Drawing.Point(12, 46);
+            this.Tabcontrol.Location = new System.Drawing.Point(13, 46);
             this.Tabcontrol.Name = "Tabcontrol";
             this.Tabcontrol.SelectedIndex = 0;
             this.Tabcontrol.Size = new System.Drawing.Size(958, 640);
@@ -284,12 +256,12 @@ namespace Employee_System
             // tabItem
             // 
             this.tabItem.Controls.Add(this.panel1);
-            this.tabItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabItem.ForeColor = System.Drawing.Color.Navy;
-            this.tabItem.Location = new System.Drawing.Point(4, 31);
+            this.tabItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabItem.ForeColor = System.Drawing.Color.White;
+            this.tabItem.Location = new System.Drawing.Point(4, 26);
             this.tabItem.Name = "tabItem";
             this.tabItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tabItem.Size = new System.Drawing.Size(950, 605);
+            this.tabItem.Size = new System.Drawing.Size(950, 610);
             this.tabItem.TabIndex = 0;
             this.tabItem.Text = "Items";
             this.tabItem.UseVisualStyleBackColor = true;
@@ -309,14 +281,14 @@ namespace Employee_System
             this.panel1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 599);
+            this.panel1.Size = new System.Drawing.Size(944, 604);
             this.panel1.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.nudquantity);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(557, 357);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(201, 169);
@@ -325,7 +297,7 @@ namespace Employee_System
             // 
             // nudquantity
             // 
-            this.nudquantity.ForeColor = System.Drawing.Color.Navy;
+            this.nudquantity.ForeColor = System.Drawing.Color.Black;
             this.nudquantity.Location = new System.Drawing.Point(47, 77);
             this.nudquantity.Maximum = new decimal(new int[] {
             20,
@@ -338,7 +310,7 @@ namespace Employee_System
             0,
             0});
             this.nudquantity.Name = "nudquantity";
-            this.nudquantity.Size = new System.Drawing.Size(113, 24);
+            this.nudquantity.Size = new System.Drawing.Size(113, 21);
             this.nudquantity.TabIndex = 1;
             this.nudquantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudquantity.Value = new decimal(new int[] {
@@ -351,10 +323,10 @@ namespace Employee_System
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Navy;
+            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(52, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 22);
+            this.label10.Size = new System.Drawing.Size(70, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "Quantity";
             // 
@@ -364,7 +336,7 @@ namespace Employee_System
             this.groupBox2.Controls.Add(this.rdotakeaway);
             this.groupBox2.Controls.Add(this.rdodinin);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(307, 357);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 172);
@@ -375,10 +347,10 @@ namespace Employee_System
             // 
             this.rdodelivery.AutoSize = true;
             this.rdodelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdodelivery.ForeColor = System.Drawing.Color.Navy;
+            this.rdodelivery.ForeColor = System.Drawing.Color.Black;
             this.rdodelivery.Location = new System.Drawing.Point(22, 129);
             this.rdodelivery.Name = "rdodelivery";
-            this.rdodelivery.Size = new System.Drawing.Size(89, 22);
+            this.rdodelivery.Size = new System.Drawing.Size(76, 19);
             this.rdodelivery.TabIndex = 3;
             this.rdodelivery.TabStop = true;
             this.rdodelivery.Text = "Delivery";
@@ -388,10 +360,10 @@ namespace Employee_System
             // 
             this.rdotakeaway.AutoSize = true;
             this.rdotakeaway.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdotakeaway.ForeColor = System.Drawing.Color.Navy;
+            this.rdotakeaway.ForeColor = System.Drawing.Color.Black;
             this.rdotakeaway.Location = new System.Drawing.Point(21, 92);
             this.rdotakeaway.Name = "rdotakeaway";
-            this.rdotakeaway.Size = new System.Drawing.Size(110, 22);
+            this.rdotakeaway.Size = new System.Drawing.Size(92, 19);
             this.rdotakeaway.TabIndex = 2;
             this.rdotakeaway.TabStop = true;
             this.rdotakeaway.Text = "Take Away";
@@ -402,10 +374,10 @@ namespace Employee_System
             this.rdodinin.AutoSize = true;
             this.rdodinin.BackColor = System.Drawing.Color.Snow;
             this.rdodinin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdodinin.ForeColor = System.Drawing.Color.Navy;
+            this.rdodinin.ForeColor = System.Drawing.Color.Black;
             this.rdodinin.Location = new System.Drawing.Point(21, 54);
             this.rdodinin.Name = "rdodinin";
-            this.rdodinin.Size = new System.Drawing.Size(81, 22);
+            this.rdodinin.Size = new System.Drawing.Size(71, 19);
             this.rdodinin.TabIndex = 1;
             this.rdodinin.TabStop = true;
             this.rdodinin.Text = "Dine In";
@@ -415,10 +387,10 @@ namespace Employee_System
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Navy;
+            this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(18, 20);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 22);
+            this.label8.Size = new System.Drawing.Size(92, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Order Type";
             // 
@@ -429,7 +401,7 @@ namespace Employee_System
             this.groupBox1.Controls.Add(this.chkextra);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.ForeColor = System.Drawing.Color.Navy;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(57, 354);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 172);
@@ -440,10 +412,10 @@ namespace Employee_System
             // 
             this.chksauce.AutoSize = true;
             this.chksauce.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chksauce.ForeColor = System.Drawing.Color.Navy;
+            this.chksauce.ForeColor = System.Drawing.Color.Black;
             this.chksauce.Location = new System.Drawing.Point(10, 130);
             this.chksauce.Name = "chksauce";
-            this.chksauce.Size = new System.Drawing.Size(77, 22);
+            this.chksauce.Size = new System.Drawing.Size(66, 19);
             this.chksauce.TabIndex = 15;
             this.chksauce.Text = "Sauce";
             this.chksauce.UseVisualStyleBackColor = true;
@@ -452,10 +424,10 @@ namespace Employee_System
             // 
             this.chkonion.AutoSize = true;
             this.chkonion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkonion.ForeColor = System.Drawing.Color.Navy;
+            this.chkonion.ForeColor = System.Drawing.Color.Black;
             this.chkonion.Location = new System.Drawing.Point(10, 93);
             this.chkonion.Name = "chkonion";
-            this.chkonion.Size = new System.Drawing.Size(105, 22);
+            this.chkonion.Size = new System.Drawing.Size(88, 19);
             this.chkonion.TabIndex = 14;
             this.chkonion.Text = "NO Onion";
             this.chkonion.UseVisualStyleBackColor = true;
@@ -464,10 +436,10 @@ namespace Employee_System
             // 
             this.chkextra.AutoSize = true;
             this.chkextra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkextra.ForeColor = System.Drawing.Color.Navy;
+            this.chkextra.ForeColor = System.Drawing.Color.Black;
             this.chkextra.Location = new System.Drawing.Point(10, 55);
             this.chkextra.Name = "chkextra";
-            this.chkextra.Size = new System.Drawing.Size(131, 22);
+            this.chkextra.Size = new System.Drawing.Size(111, 19);
             this.chkextra.TabIndex = 13;
             this.chkextra.Text = "Extra Cheese";
             this.chkextra.UseVisualStyleBackColor = true;
@@ -476,50 +448,50 @@ namespace Employee_System
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(6, 20);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(7, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 22);
+            this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 12;
             this.label7.Text = "Additions";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(34, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 18);
+            this.label6.Size = new System.Drawing.Size(0, 15);
             this.label6.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Navy;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(53, 120);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 22);
+            this.label5.Size = new System.Drawing.Size(111, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Available Item";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Navy;
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(475, 341);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 18);
+            this.label9.Size = new System.Drawing.Size(0, 15);
             this.label9.TabIndex = 11;
             // 
             // lstitem
             // 
-            this.lstitem.ForeColor = System.Drawing.Color.Navy;
+            this.lstitem.ForeColor = System.Drawing.Color.Black;
             this.lstitem.FormattingEnabled = true;
-            this.lstitem.ItemHeight = 18;
+            this.lstitem.ItemHeight = 15;
             this.lstitem.Location = new System.Drawing.Point(57, 161);
             this.lstitem.Name = "lstitem";
-            this.lstitem.Size = new System.Drawing.Size(225, 148);
+            this.lstitem.Size = new System.Drawing.Size(225, 139);
             this.lstitem.TabIndex = 3;
             this.lstitem.SelectedIndexChanged += new System.EventHandler(this.lstitem_SelectedIndexChanged);
             // 
@@ -527,17 +499,17 @@ namespace Employee_System
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(53, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 22);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "category";
             // 
             // cmbcategory
             // 
             this.cmbcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbcategory.ForeColor = System.Drawing.Color.Navy;
+            this.cmbcategory.ForeColor = System.Drawing.Color.Black;
             this.cmbcategory.FormattingEnabled = true;
             this.cmbcategory.Items.AddRange(new object[] {
             "Appetizers",
@@ -546,7 +518,7 @@ namespace Employee_System
             "Desserts"});
             this.cmbcategory.Location = new System.Drawing.Point(57, 65);
             this.cmbcategory.Name = "cmbcategory";
-            this.cmbcategory.Size = new System.Drawing.Size(225, 26);
+            this.cmbcategory.Size = new System.Drawing.Size(225, 23);
             this.cmbcategory.TabIndex = 1;
             this.cmbcategory.SelectedIndexChanged += new System.EventHandler(this.cmbcategory_SelectedIndexChanged);
             // 
@@ -565,7 +537,7 @@ namespace Employee_System
             this.grpitemdetail.Controls.Add(this.txtname);
             this.grpitemdetail.Controls.Add(this.lblname);
             this.grpitemdetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpitemdetail.ForeColor = System.Drawing.Color.Navy;
+            this.grpitemdetail.ForeColor = System.Drawing.Color.Black;
             this.grpitemdetail.Location = new System.Drawing.Point(339, 24);
             this.grpitemdetail.Name = "grpitemdetail";
             this.grpitemdetail.Size = new System.Drawing.Size(509, 285);
@@ -575,9 +547,9 @@ namespace Employee_System
             // 
             // btnnew
             // 
-            this.btnnew.BackColor = System.Drawing.Color.Navy;
+            this.btnnew.BackColor = System.Drawing.Color.White;
             this.btnnew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnnew.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnnew.ForeColor = System.Drawing.Color.Black;
             this.btnnew.Location = new System.Drawing.Point(45, 200);
             this.btnnew.Name = "btnnew";
             this.btnnew.Size = new System.Drawing.Size(108, 38);
@@ -599,9 +571,9 @@ namespace Employee_System
             // 
             // btnadd
             // 
-            this.btnadd.BackColor = System.Drawing.Color.Navy;
+            this.btnadd.BackColor = System.Drawing.Color.White;
             this.btnadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnadd.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnadd.ForeColor = System.Drawing.Color.Black;
             this.btnadd.Location = new System.Drawing.Point(45, 154);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(108, 40);
@@ -616,16 +588,16 @@ namespace Employee_System
             this.txtava.Location = new System.Drawing.Point(320, 224);
             this.txtava.Name = "txtava";
             this.txtava.ReadOnly = true;
-            this.txtava.Size = new System.Drawing.Size(159, 27);
+            this.txtava.Size = new System.Drawing.Size(159, 23);
             this.txtava.TabIndex = 7;
             // 
             // lblava
             // 
             this.lblava.AutoSize = true;
-            this.lblava.ForeColor = System.Drawing.Color.Navy;
+            this.lblava.ForeColor = System.Drawing.Color.Black;
             this.lblava.Location = new System.Drawing.Point(198, 231);
             this.lblava.Name = "lblava";
-            this.lblava.Size = new System.Drawing.Size(85, 20);
+            this.lblava.Size = new System.Drawing.Size(74, 17);
             this.lblava.TabIndex = 6;
             this.lblava.Text = "Available";
             // 
@@ -642,10 +614,10 @@ namespace Employee_System
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(198, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Price";
             // 
@@ -654,16 +626,16 @@ namespace Employee_System
             this.txtprice.Location = new System.Drawing.Point(320, 89);
             this.txtprice.Name = "txtprice";
             this.txtprice.ReadOnly = true;
-            this.txtprice.Size = new System.Drawing.Size(159, 27);
+            this.txtprice.Size = new System.Drawing.Size(159, 23);
             this.txtprice.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(198, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Description";
             // 
@@ -672,16 +644,16 @@ namespace Employee_System
             this.txtname.Location = new System.Drawing.Point(320, 38);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
-            this.txtname.Size = new System.Drawing.Size(159, 27);
+            this.txtname.Size = new System.Drawing.Size(159, 23);
             this.txtname.TabIndex = 1;
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.ForeColor = System.Drawing.Color.Navy;
+            this.lblname.ForeColor = System.Drawing.Color.Black;
             this.lblname.Location = new System.Drawing.Point(198, 47);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(63, 20);
+            this.lblname.Size = new System.Drawing.Size(54, 17);
             this.lblname.TabIndex = 0;
             this.lblname.Text = " Name";
             // 
@@ -693,46 +665,53 @@ namespace Employee_System
             this.tabcurrent.Controls.Add(this.btnclear);
             this.tabcurrent.Controls.Add(this.btnremove);
             this.tabcurrent.Controls.Add(this.dgcurrentorder);
-            this.tabcurrent.Location = new System.Drawing.Point(4, 31);
+            this.tabcurrent.Location = new System.Drawing.Point(4, 26);
             this.tabcurrent.Name = "tabcurrent";
             this.tabcurrent.Padding = new System.Windows.Forms.Padding(3);
-            this.tabcurrent.Size = new System.Drawing.Size(950, 605);
+            this.tabcurrent.Size = new System.Drawing.Size(950, 610);
             this.tabcurrent.TabIndex = 1;
             this.tabcurrent.Text = "Current Order";
             this.tabcurrent.UseVisualStyleBackColor = true;
             // 
             // txttotal
             // 
-            this.txttotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txttotal.Location = new System.Drawing.Point(716, 507);
+            this.txttotal.BackColor = System.Drawing.Color.White;
+            this.txttotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotal.ForeColor = System.Drawing.Color.Black;
+            this.txttotal.Location = new System.Drawing.Point(352, 525);
             this.txttotal.Name = "txttotal";
-            this.txttotal.Size = new System.Drawing.Size(123, 28);
+            this.txttotal.Size = new System.Drawing.Size(182, 29);
             this.txttotal.TabIndex = 5;
             this.txttotal.Text = "Total :0.00JD ";
             // 
             // txttax
             // 
-            this.txttax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txttax.Location = new System.Drawing.Point(574, 507);
+            this.txttax.BackColor = System.Drawing.Color.White;
+            this.txttax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttax.ForeColor = System.Drawing.Color.Black;
+            this.txttax.Location = new System.Drawing.Point(540, 525);
             this.txttax.Name = "txttax";
-            this.txttax.Size = new System.Drawing.Size(114, 28);
+            this.txttax.Size = new System.Drawing.Size(182, 29);
             this.txttax.TabIndex = 4;
             this.txttax.Text = "Tax: 0.00JD";
             // 
             // txtsub
             // 
-            this.txtsub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtsub.Location = new System.Drawing.Point(387, 507);
+            this.txtsub.BackColor = System.Drawing.Color.White;
+            this.txtsub.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsub.ForeColor = System.Drawing.Color.Black;
+            this.txtsub.Location = new System.Drawing.Point(728, 525);
             this.txtsub.Name = "txtsub";
-            this.txtsub.Size = new System.Drawing.Size(155, 28);
+            this.txtsub.Size = new System.Drawing.Size(182, 29);
             this.txtsub.TabIndex = 3;
             this.txtsub.Text = "SubTotal: 0.00JD";
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnclear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnclear.Location = new System.Drawing.Point(223, 503);
+            this.btnclear.BackColor = System.Drawing.Color.White;
+            this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.ForeColor = System.Drawing.Color.Black;
+            this.btnclear.Location = new System.Drawing.Point(64, 522);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(138, 36);
             this.btnclear.TabIndex = 2;
@@ -742,9 +721,10 @@ namespace Employee_System
             // 
             // btnremove
             // 
-            this.btnremove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnremove.BackColor = System.Drawing.Color.White;
+            this.btnremove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnremove.ForeColor = System.Drawing.Color.Black;
-            this.btnremove.Location = new System.Drawing.Point(69, 503);
+            this.btnremove.Location = new System.Drawing.Point(208, 522);
             this.btnremove.Name = "btnremove";
             this.btnremove.Size = new System.Drawing.Size(138, 36);
             this.btnremove.TabIndex = 1;
@@ -775,12 +755,12 @@ namespace Employee_System
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgcurrentorder.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgcurrentorder.GridColor = System.Drawing.Color.SlateGray;
-            this.dgcurrentorder.Location = new System.Drawing.Point(69, 49);
+            this.dgcurrentorder.Location = new System.Drawing.Point(76, 61);
             this.dgcurrentorder.Name = "dgcurrentorder";
             this.dgcurrentorder.RowHeadersWidth = 51;
             this.dgcurrentorder.RowTemplate.Height = 24;
             this.dgcurrentorder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgcurrentorder.Size = new System.Drawing.Size(811, 426);
+            this.dgcurrentorder.Size = new System.Drawing.Size(791, 420);
             this.dgcurrentorder.TabIndex = 0;
             // 
             // Itemdatagride
@@ -817,21 +797,202 @@ namespace Employee_System
             // 
             this.tabHill.Controls.Add(this.pnlRestauranthall);
             this.tabHill.ForeColor = System.Drawing.Color.Blue;
-            this.tabHill.Location = new System.Drawing.Point(4, 31);
+            this.tabHill.Location = new System.Drawing.Point(4, 26);
             this.tabHill.Name = "tabHill";
             this.tabHill.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHill.Size = new System.Drawing.Size(950, 605);
+            this.tabHill.Size = new System.Drawing.Size(950, 610);
             this.tabHill.TabIndex = 3;
             this.tabHill.Text = "Hall Map";
             this.tabHill.UseVisualStyleBackColor = true;
             // 
             // pnlRestauranthall
             // 
+            this.pnlRestauranthall.BackColor = System.Drawing.Color.PapayaWhip;
+            this.pnlRestauranthall.Controls.Add(this.btnT10);
+            this.pnlRestauranthall.Controls.Add(this.btnT9);
+            this.pnlRestauranthall.Controls.Add(this.btnT8);
+            this.pnlRestauranthall.Controls.Add(this.btnT2);
+            this.pnlRestauranthall.Controls.Add(this.btnT3);
+            this.pnlRestauranthall.Controls.Add(this.btnT4);
+            this.pnlRestauranthall.Controls.Add(this.btnT5);
+            this.pnlRestauranthall.Controls.Add(this.btnT6);
+            this.pnlRestauranthall.Controls.Add(this.btnT7);
+            this.pnlRestauranthall.Controls.Add(this.btnT1);
+            this.pnlRestauranthall.Controls.Add(this.btnacc);
+            this.pnlRestauranthall.Controls.Add(this.btnreserve);
+            this.pnlRestauranthall.Controls.Add(this.btnavailable);
             this.pnlRestauranthall.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRestauranthall.Location = new System.Drawing.Point(3, 3);
             this.pnlRestauranthall.Name = "pnlRestauranthall";
-            this.pnlRestauranthall.Size = new System.Drawing.Size(944, 599);
+            this.pnlRestauranthall.Size = new System.Drawing.Size(944, 604);
             this.pnlRestauranthall.TabIndex = 0;
+            // 
+            // btnT10
+            // 
+            this.btnT10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnT10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT10.ForeColor = System.Drawing.Color.Black;
+            this.btnT10.Location = new System.Drawing.Point(667, 495);
+            this.btnT10.Name = "btnT10";
+            this.btnT10.Size = new System.Drawing.Size(131, 69);
+            this.btnT10.TabIndex = 12;
+            this.btnT10.Text = "T10";
+            this.btnT10.UseVisualStyleBackColor = false;
+            this.btnT10.Click += new System.EventHandler(this.btnT10_Click);
+            // 
+            // btnT9
+            // 
+            this.btnT9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnT9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT9.ForeColor = System.Drawing.Color.Black;
+            this.btnT9.Location = new System.Drawing.Point(215, 363);
+            this.btnT9.Name = "btnT9";
+            this.btnT9.Size = new System.Drawing.Size(131, 69);
+            this.btnT9.TabIndex = 11;
+            this.btnT9.Text = "T9";
+            this.btnT9.UseVisualStyleBackColor = false;
+            this.btnT9.Click += new System.EventHandler(this.btnT9_Click);
+            // 
+            // btnT8
+            // 
+            this.btnT8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnT8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT8.ForeColor = System.Drawing.Color.Black;
+            this.btnT8.Location = new System.Drawing.Point(536, 363);
+            this.btnT8.Name = "btnT8";
+            this.btnT8.Size = new System.Drawing.Size(131, 69);
+            this.btnT8.TabIndex = 10;
+            this.btnT8.Text = "T8";
+            this.btnT8.UseVisualStyleBackColor = false;
+            this.btnT8.Click += new System.EventHandler(this.btnT8_Click);
+            // 
+            // btnT2
+            // 
+            this.btnT2.BackColor = System.Drawing.Color.Red;
+            this.btnT2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT2.ForeColor = System.Drawing.Color.Black;
+            this.btnT2.Location = new System.Drawing.Point(215, 97);
+            this.btnT2.Name = "btnT2";
+            this.btnT2.Size = new System.Drawing.Size(131, 69);
+            this.btnT2.TabIndex = 9;
+            this.btnT2.Text = "T2";
+            this.btnT2.UseVisualStyleBackColor = false;
+            this.btnT2.Click += new System.EventHandler(this.btnT2_Click);
+            // 
+            // btnT3
+            // 
+            this.btnT3.BackColor = System.Drawing.Color.Red;
+            this.btnT3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT3.ForeColor = System.Drawing.Color.Black;
+            this.btnT3.Location = new System.Drawing.Point(526, 97);
+            this.btnT3.Name = "btnT3";
+            this.btnT3.Size = new System.Drawing.Size(131, 69);
+            this.btnT3.TabIndex = 8;
+            this.btnT3.Text = "T3";
+            this.btnT3.UseVisualStyleBackColor = false;
+            this.btnT3.Click += new System.EventHandler(this.btnT3_Click);
+            // 
+            // btnT4
+            // 
+            this.btnT4.BackColor = System.Drawing.Color.Yellow;
+            this.btnT4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT4.ForeColor = System.Drawing.Color.Black;
+            this.btnT4.Location = new System.Drawing.Point(383, 495);
+            this.btnT4.Name = "btnT4";
+            this.btnT4.Size = new System.Drawing.Size(138, 69);
+            this.btnT4.TabIndex = 7;
+            this.btnT4.Text = "T4";
+            this.btnT4.UseVisualStyleBackColor = false;
+            this.btnT4.Click += new System.EventHandler(this.btnT4_Click);
+            // 
+            // btnT5
+            // 
+            this.btnT5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnT5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT5.ForeColor = System.Drawing.Color.Black;
+            this.btnT5.Location = new System.Drawing.Point(69, 224);
+            this.btnT5.Name = "btnT5";
+            this.btnT5.Size = new System.Drawing.Size(131, 69);
+            this.btnT5.TabIndex = 6;
+            this.btnT5.Text = "T5";
+            this.btnT5.UseVisualStyleBackColor = false;
+            this.btnT5.Click += new System.EventHandler(this.btnT5_Click);
+            // 
+            // btnT6
+            // 
+            this.btnT6.BackColor = System.Drawing.Color.Yellow;
+            this.btnT6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT6.ForeColor = System.Drawing.Color.Black;
+            this.btnT6.Location = new System.Drawing.Point(383, 224);
+            this.btnT6.Name = "btnT6";
+            this.btnT6.Size = new System.Drawing.Size(131, 69);
+            this.btnT6.TabIndex = 5;
+            this.btnT6.Text = "T6";
+            this.btnT6.UseVisualStyleBackColor = false;
+            this.btnT6.Click += new System.EventHandler(this.btnT6_Click);
+            // 
+            // btnT7
+            // 
+            this.btnT7.BackColor = System.Drawing.Color.Yellow;
+            this.btnT7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT7.ForeColor = System.Drawing.Color.Black;
+            this.btnT7.Location = new System.Drawing.Point(705, 224);
+            this.btnT7.Name = "btnT7";
+            this.btnT7.Size = new System.Drawing.Size(131, 69);
+            this.btnT7.TabIndex = 4;
+            this.btnT7.Text = "T7";
+            this.btnT7.UseVisualStyleBackColor = false;
+            this.btnT7.Click += new System.EventHandler(this.btnT7_Click);
+            // 
+            // btnT1
+            // 
+            this.btnT1.BackColor = System.Drawing.Color.Yellow;
+            this.btnT1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnT1.ForeColor = System.Drawing.Color.Black;
+            this.btnT1.Location = new System.Drawing.Point(102, 495);
+            this.btnT1.Name = "btnT1";
+            this.btnT1.Size = new System.Drawing.Size(131, 69);
+            this.btnT1.TabIndex = 3;
+            this.btnT1.Text = "T1";
+            this.btnT1.UseVisualStyleBackColor = false;
+            this.btnT1.Click += new System.EventHandler(this.btnT1_Click);
+            // 
+            // btnacc
+            // 
+            this.btnacc.BackColor = System.Drawing.Color.Red;
+            this.btnacc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnacc.ForeColor = System.Drawing.Color.Black;
+            this.btnacc.Location = new System.Drawing.Point(559, 16);
+            this.btnacc.Name = "btnacc";
+            this.btnacc.Size = new System.Drawing.Size(108, 34);
+            this.btnacc.TabIndex = 2;
+            this.btnacc.Text = "Occupied";
+            this.btnacc.UseVisualStyleBackColor = false;
+            // 
+            // btnreserve
+            // 
+            this.btnreserve.BackColor = System.Drawing.Color.Yellow;
+            this.btnreserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreserve.ForeColor = System.Drawing.Color.Black;
+            this.btnreserve.Location = new System.Drawing.Point(373, 16);
+            this.btnreserve.Name = "btnreserve";
+            this.btnreserve.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnreserve.Size = new System.Drawing.Size(108, 34);
+            this.btnreserve.TabIndex = 1;
+            this.btnreserve.Text = "Reserved";
+            this.btnreserve.UseVisualStyleBackColor = false;
+            // 
+            // btnavailable
+            // 
+            this.btnavailable.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnavailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnavailable.ForeColor = System.Drawing.Color.Black;
+            this.btnavailable.Location = new System.Drawing.Point(205, 16);
+            this.btnavailable.Name = "btnavailable";
+            this.btnavailable.Size = new System.Drawing.Size(108, 34);
+            this.btnavailable.TabIndex = 0;
+            this.btnavailable.Text = "Available";
+            this.btnavailable.UseVisualStyleBackColor = false;
             // 
             // Item
             // 
@@ -896,7 +1057,7 @@ namespace Employee_System
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 42F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(982, 707);
@@ -909,6 +1070,7 @@ namespace Employee_System
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Restaurant Managment System";
+            this.Load += new System.EventHandler(this.Form2_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.Tabcontrol.ResumeLayout(false);
@@ -929,6 +1091,7 @@ namespace Employee_System
             this.tabcurrent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgcurrentorder)).EndInit();
             this.tabHill.ResumeLayout(false);
+            this.pnlRestauranthall.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -948,22 +1111,12 @@ namespace Employee_System
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenu;
-        private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem itemToolStripMenuItem;
         private ToolStripMenuItem orderToolStripMenuItem;
         private ToolStripMenuItem reportsToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
-        private ToolStripMenuItem addItemToolStripMenuItem;
-        private ToolStripMenuItem deleteItemToolStripMenuItem;
-        private ToolStripMenuItem newOrderToolStripMenuItem;
-        private ToolStripMenuItem currentOrderToolStripMenuItem;
-        private ToolStripMenuItem orderHistoryToolStripMenuItem;
-        private ToolStripMenuItem dailySalesToolStripMenuItem;
-        private ToolStripMenuItem itemReportToolStripMenuItem;
-        private ToolStripMenuItem orderReportToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
-        private ToolStripMenuItem helpToolStripMenuItem1;
         private TabControl Tabcontrol;
         private TabPage tabItem;
         private TabPage tabcurrent;
@@ -1016,11 +1169,28 @@ namespace Employee_System
         private DataGridViewTextBoxColumn Extra;
         private DataGridViewTextBoxColumn Price;
         private DataGridViewTextBoxColumn Total;
-        private ToolStripMenuItem viewItemToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private TextBox txttotal;
         private TextBox txttax;
         private TextBox txtsub;
         private Button btnnew;
+        private ToolStripMenuItem loginToolStripMenuItem;
+        private ToolStripMenuItem salesReportToolStripMenuItem;
+        private ToolStripMenuItem addItemToolStripMenuItem;
+        private ToolStripMenuItem newItemToolStripMenuItem;
+        private ToolStripMenuItem currentOrderToolStripMenuItem;
+        private Button btnacc;
+        private Button btnreserve;
+        private Button btnavailable;
+        private Button btnT10;
+        private Button btnT9;
+        private Button btnT8;
+        private Button btnT2;
+        private Button btnT3;
+        private Button btnT4;
+        private Button btnT5;
+        private Button btnT6;
+        private Button btnT7;
+        private Button btnT1;
     }
 }

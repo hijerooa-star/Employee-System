@@ -257,5 +257,159 @@ namespace Employee_System
             chkonion.Checked = false;
         }
 
+        // Menu strip
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+     
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            login.Show();
+            this.Hide();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+       "SYSTEM INFORMATION\n\n" +
+       "Restaurant Ordering System\n\n" +
+       "This system helps employees manage restaurant items, " +
+       "create and review customer orders, and view sales information.\n\n" +
+       "The system is designed to make order management " +
+       "simple, fast, and organized.",
+       "Help - System Information");
+        }
+
+        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnadd.PerformClick();
+
+        }
+
+        private void newItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnnew.PerformClick();
+
+        }
+
+        private void currentOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tabcontrol.SelectedTab = tabcurrent;
+
+        }
+
+            private void salesReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decimal totalSales = 0;
+            int totalItems = 0;
+
+            foreach (DataGridViewRow row in dgcurrentorder.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    if (row.Cells["Quantity"].Value != null)
+                        totalItems += Convert.ToInt32(row.Cells["Quantity"].Value);
+
+                    if (row.Cells["Total"].Value != null)
+                        totalSales += Convert.ToDecimal(row.Cells["Total"].Value);
+                }
+            }
+
+            MessageBox.Show(
+                "SALES REPORT\n\n" +
+                "Total Items Sold: " + totalItems + "\n" +
+                "Total Sales: " + totalSales.ToString("0.00") + " JD",
+                "Sales Report");
+        }
+        private void MakeOval(Button btn)
+        {
+            System.Drawing.Drawing2D.GraphicsPath path =
+                new System.Drawing.Drawing2D.GraphicsPath();
+
+            path.AddEllipse(0, 0, btn.Width, btn.Height);
+
+            btn.Region = new Region(path);
+        }
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+            // tabel buttons shape
+            MakeOval(btnT1);
+            MakeOval(btnT2);
+            MakeOval(btnT3);
+            MakeOval(btnT4);
+            MakeOval(btnT6);
+            MakeOval(btnT7);
+        }
+        private void ChangeTableStatus(Button table)
+        {
+            if (table.BackColor == Color.Green)
+            {
+                // Available → Reserved
+                table.BackColor = Color.Red;
+            }
+            else if (table.BackColor == Color.Red)
+            {
+                // Reserved → Occupied
+                table.BackColor = Color.Yellow;
+            }
+            else
+            {
+                // Occupied → Available
+                table.BackColor = Color.Green;
+            }
+        }
+            private void btnT1_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT1);
+        }
+
+        private void btnT2_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT2);
+        }
+
+        private void btnT3_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT3);
+        }
+
+        private void btnT4_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT4);
+        }
+
+        private void btnT5_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT5);
+        }
+
+        private void btnT6_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT6);
+        }
+
+        private void btnT7_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT7);
+        }
+
+        private void btnT8_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT8);
+        }
+
+        private void btnT9_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT9);
+        }
+
+        private void btnT10_Click(object sender, EventArgs e)
+        {
+            ChangeTableStatus(btnT10);
+        }
+
     }
+    
 }
